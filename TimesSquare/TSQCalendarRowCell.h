@@ -31,6 +31,18 @@
  */
 @property (nonatomic, weak, readonly) UIImage *selectedBackgroundImage;
 
+/** Today text color.
+ 
+ This is default white color.
+ */
+@property (nonatomic, weak, readonly) UIColor *todayTextColor;
+
+/** Today text color.
+ 
+ This is default gray color.
+ */
+@property (nonatomic, weak, readonly) UIColor *todayShadowColor;
+
 /** The background image for a day that's "today".
  
  This is dark gray in the system's built-in Calendar app. You probably want to use a stretchable image.

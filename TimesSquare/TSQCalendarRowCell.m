@@ -89,9 +89,9 @@
     [self configureButton:self.todayButton];
     [self.todayButton addTarget:self action:@selector(todayButtonPressed:) forControlEvents:UIControlEventTouchDown];
     
-    [self.todayButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.todayButton setTitleColor:self.todayTextColor forState:UIControlStateNormal];
     [self.todayButton setBackgroundImage:[self todayBackgroundImage] forState:UIControlStateNormal];
-    [self.todayButton setTitleShadowColor:[UIColor colorWithWhite:0.0f alpha:0.75f] forState:UIControlStateNormal];
+    [self.todayButton setTitleShadowColor:self.todayShadowColor forState:UIControlStateNormal];
 
     self.todayButton.titleLabel.shadowOffset = CGSizeMake(0.0f, -1.0f / [UIScreen mainScreen].scale);
 }
@@ -111,6 +111,14 @@
     
     self.selectedButton.titleLabel.shadowOffset = CGSizeMake(0.0f, -1.0f / [UIScreen mainScreen].scale);
     self.indexOfSelectedButton = -1;
+}
+
+- (UIColor *)todayTextColor {
+    return [UIColor whiteColor];
+}
+
+- (UIColor *)todayShadowColor {
+    return [UIColor colorWithWhite:0.0f alpha:0.75f];
 }
 
 - (void)setBeginningDate:(NSDate *)date;
